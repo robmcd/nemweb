@@ -1,7 +1,8 @@
 """ interfaces with sqlite3 database """
-import sqlite3
-import os
 import datetime
+import os
+import sqlite3
+
 from nemweb import CONFIG
 
 
@@ -52,6 +53,6 @@ def start_from(
         )
 
     except sqlite3.OperationalError:
-        date = datetime.datetime.strptime(start_date, "%Y%m%d")
+        date = datetime.datetime.strptime("20190701", "%Y%m%d")
 
     return date

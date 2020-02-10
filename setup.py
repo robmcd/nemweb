@@ -1,8 +1,9 @@
-import os
 import configparser
+import os
+
 from setuptools import setup
-from setuptools.command.install import install
 from setuptools.command.develop import develop
+from setuptools.command.install import install
 
 
 def create_config():
@@ -49,5 +50,5 @@ setup(name='nemweb',
           'requests'],
       cmdclass={'install': PostInstallCommand,
                 'develop': PostDevelopCommand},
-      package_data={'nemweb': 'tests/2018_09_21.pkl'}
+      package_data={'nemweb': ['tests/2018_09_21.pkl']}
       )
